@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试页面</title>
+    <!-- 微信分享优化 -->
+    <title>这是一个吸引人的标题</title>
+    <meta name="description" content="精彩内容，点击查看">
+    <meta property="og:title" content="这是一个吸引人的标题">
+    <meta property="og:description" content="精彩内容，点击查看">
+    <meta property="og:image" content="https://gw.alicdn.com/tfs/TB1xdc4GxTpK1RjSZFMXXbG_VXa-200-200.png">
+    <!-- 微信特定的标签 -->
+    <meta itemprop="name" content="这是一个吸引人的标题">
+    <meta itemprop="description" content="精彩内容，点击查看">
+    <meta itemprop="image" content="https://gw.alicdn.com/tfs/TB1xdc4GxTpK1RjSZFMXXbG_VXa-200-200.png">
 </head>
 <body>
     <div style="text-align: center; padding: 20px;">
@@ -19,7 +28,6 @@
     </div>
 
     <script>
-        // 添加加载状态检查
         window.onload = function() {
             document.getElementById('status').textContent = '所有资源加载完成';
         }
