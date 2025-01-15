@@ -3,49 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分享测试页面</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <title>分享图片</title>
 </head>
-<body>
-    <div id="shareContent" style="text-align: center; padding: 20px; background: white;">
-        <h1 style="color: #333;">扫码访问测试页面</h1>
-        <div id="qrcode" style="margin: 20px auto;"></div>
-        <p style="color: #666;">👆长按上方二维码访问</p>
+<body style="margin: 0; padding: 0; background: #fff;">
+    <!-- 直接显示为一张图片 -->
+    <div style="text-align: center; padding: 20px;">
+        <img src="https://gw.alicdn.com/tfs/TB1xdc4GxTpK1RjSZFMXXbG_VXa-200-200.png" 
+             alt="分享图片" 
+             style="max-width: 100%; height: auto;">
+        <p style="margin-top: 20px; color: #333;">
+            访问网址：www.danglingwings.org
+        </p>
     </div>
-
-    <button onclick="generateShareImage()" style="display: block; margin: 20px auto; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px;">
-        生成分享图片
-    </button>
-
-    <script>
-        window.onload = function() {
-            new QRCode(document.getElementById("qrcode"), {
-                text: window.location.href,
-                width: 200,
-                height: 200
-            });
-        }
-
-        function generateShareImage() {
-            html2canvas(document.getElementById('shareContent')).then(function(canvas) {
-                // 创建图片
-                var img = document.createElement('img');
-                img.src = canvas.toDataURL("image/png");
-                img.style.maxWidth = '100%';
-                
-                // 清除按钮和之前的内容
-                document.body.innerHTML = '';
-                
-                // 添加图片和提示
-                document.body.appendChild(img);
-                var p = document.createElement('p');
-                p.textContent = '👆 长按图片保存后分享到朋友圈';
-                p.style.textAlign = 'center';
-                p.style.padding = '10px';
-                document.body.appendChild(p);
-            });
-        }
-    </script>
 </body>
 </html>
