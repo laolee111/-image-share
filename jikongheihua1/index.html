@@ -1,67 +1,140 @@
-<style>
-    /* ... 其他样式保持不变 ... */
-    
-    .intro {
-        font-size: 18px;  /* 增大基础字体 */
-        padding: 15px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        margin-bottom: 15px;
-    }
-    .intro p {
-        margin: 12px 0;
-        letter-spacing: 0.5px;
-        font-size: 17px;  /* 增大正文字体 */
-        line-height: 1.6;
-    }
-    
-    .image-pair {
-        margin: 20px 0;
-        padding: 3px;  /* 减小内边距让图片更大 */
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        width: 98%;  /* 增加宽度 */
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .image-pair img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        margin: 0 auto;
-        cursor: pointer;
-        display: block;
-    }
-    
-    h1 {
-        font-size: 22px;  /* 增大标题字体 */
-        margin-bottom: 15px;
-        color: #2c3e50;
-        text-align: center;
-    }
-
-    /* 电脑端的样式 */
-    @media (min-width: 768px) {
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疾控"黑话"翻译指南</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
         .container {
-            padding: 20px;
-            max-width: 1200px;  /* 增加最大宽度 */
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
         }
         .intro {
-            font-size: 20px;  /* 电脑端更大字体 */
-            padding: 20px;
+            font-size: 18px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
         }
         .intro p {
-            font-size: 19px;  /* 电脑端更大正文 */
+            margin: 12px 0;
+            letter-spacing: 0.5px;
+            font-size: 17px;
+            line-height: 1.6;
         }
-        h1 {
-            font-size: 28px;  /* 电脑端更大标题 */
+        .image-container {
+            margin: 15px auto;
         }
         .image-pair {
-            padding: 5px;
-            margin: 25px auto;
-            width: 98%;  /* 增加宽度 */
+            margin: 20px 0;
+            padding: 3px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
         }
-    }
-</style>
+        .image-pair img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 0 auto;
+            cursor: pointer;
+            display: block;
+        }
+        .image-pair img:nth-child(2) {
+            display: none;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+                max-width: 1200px;
+            }
+            .intro {
+                font-size: 20px;
+                padding: 20px;
+            }
+            .intro p {
+                font-size: 19px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .image-pair {
+                padding: 5px;
+                margin: 25px auto;
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>疾控"黑话"翻译指南</h1>
+            <p>自然疫源性疾病、群体免疫、气溶胶、易感人群、流行病学史...每个字都认识，连起来有点蒙对吗？</p>
+            <p>AEFI、PCR、N95立马就晕菜了是吧？</p>
+            <p>如果这些疾控黑话出现在你的生活场景中，当你针对或被针对时，幼小的心灵会起什么化学反应呢？</p>
+            <p>社会分工越来越密，颗粒度要求越来越细。各个行当都制造出大量的黑话。听起来高大尚，想起来很烧脑。地方病防控是疾控的一个堂口，更是袖里乾坤。</p>
+            <p>这里小编特意准备一份翻译指南，让我们一起说"人话"，清晰表达。</p>
+        </div>
+        
+        <div class="image-container">
+            <!-- 第一组图片 -->
+            <div class="image-pair" onclick="toggleImages(this)">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/1.png">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/1.1.png">
+            </div>
+            
+            <!-- 第二组图片 -->
+            <div class="image-pair" onclick="toggleImages(this)">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/2.png">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/2.1.png">
+            </div>
+            
+            <!-- 第三组图片 -->
+            <div class="image-pair" onclick="toggleImages(this)">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/3.png">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/3.1.png">
+            </div>
+            
+            <!-- 第四组图片 -->
+            <div class="image-pair" onclick="toggleImages(this)">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/4.png">
+                <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/4.1.png">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleImages(container) {
+            const images = container.getElementsByTagName('img');
+            if (images[0].style.display === 'none') {
+                images[0].style.display = 'block';
+                images[1].style.display = 'none';
+            } else {
+                images[0].style.display = 'none';
+                images[1].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
