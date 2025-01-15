@@ -43,15 +43,16 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .image-container img {
+        .image-pair img {
             width: 95%;
             max-width: 800px;
             height: auto;
             border-radius: 8px;
-            margin: 10px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .image-pair img:nth-child(2) {
+            display: none;
         }
         h1 {
             font-size: 26px;
@@ -75,29 +76,46 @@
         <!-- 图片部分 -->
         <div class="image-container">
             <!-- 第一组图片 -->
-            <div class="image-pair">
+            <div class="image-pair" onclick="toggleImages(this)">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/1.png">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/1.1.png">
             </div>
             
             <!-- 第二组图片 -->
-            <div class="image-pair">
+            <div class="image-pair" onclick="toggleImages(this)">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/2.png">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/2.1.png">
             </div>
             
             <!-- 第三组图片 -->
-            <div class="image-pair">
+            <div class="image-pair" onclick="toggleImages(this)">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/3.png">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/3.1.png">
             </div>
             
             <!-- 第四组图片 -->
-            <div class="image-pair">
+            <div class="image-pair" onclick="toggleImages(this)">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/4.png">
                 <img src="http://nightmare-4gucaxbg821a4f20-1331533493.tcloudbaseapp.com/4.1.png">
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleImages(container) {
+            const images = container.getElementsByTagName('img');
+            if (images[0].style.display === 'none') {
+                images[0].style.display = 'block';
+                images[1].style.display = 'none';
+            } else {
+                images[0].style.display = 'none';
+                images[1].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+        }
+    </script>
 </body>
 </html>
