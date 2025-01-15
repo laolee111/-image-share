@@ -16,49 +16,73 @@
         .container {
             max-width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
         }
         .intro {
-            font-size: 18px;
-            padding: 20px;
+            font-size: 16px;
+            padding: 15px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .intro p {
-            margin: 15px 0;
+            margin: 12px 0;
             letter-spacing: 0.5px;
-            font-size: 17px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.6;
         }
         .image-container {
-            margin: 20px auto;
-            text-align: center;
+            margin: 15px auto;
         }
         .image-pair {
-            margin: 30px 0;
-            padding: 20px;
+            margin: 20px 0;
+            padding: 5px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .image-pair img {
-            width: 95%;
-            max-width: 800px;
+            width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 4px;
             margin: 0 auto;
             cursor: pointer;
+            display: block;
         }
         .image-pair img:nth-child(2) {
             display: none;
         }
         h1 {
-            font-size: 26px;
-            margin-bottom: 25px;
+            font-size: 20px;
+            margin-bottom: 15px;
             color: #2c3e50;
             text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+                max-width: 1000px;
+            }
+            .intro {
+                font-size: 18px;
+                padding: 20px;
+            }
+            .intro p {
+                font-size: 17px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .image-pair {
+                padding: 10px;
+                margin: 25px auto;
+                width: 95%;
+            }
+            .image-pair img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -73,7 +97,6 @@
             <p>这里小编特意准备一份翻译指南，让我们一起说"人话"，清晰表达。</p>
         </div>
         
-        <!-- 图片部分 -->
         <div class="image-container">
             <!-- 第一组图片 -->
             <div class="image-pair" onclick="toggleImages(this)">
@@ -111,10 +134,6 @@
                 images[0].style.display = 'none';
                 images[1].style.display = 'block';
             }
-        }
-    </script>
-</body>
-</html>
         }
     </script>
 </body>
